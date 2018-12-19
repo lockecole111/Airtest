@@ -242,7 +242,7 @@ class Android(Device):
         if filename:
             aircv.imwrite(filename, screen)
         return screen
-
+    
     def shell(self, *args, **kwargs):
         """
         Return `adb shell` interpreter
@@ -335,7 +335,20 @@ class Android(Device):
         self.touch(pos)
         time.sleep(0.05)
         self.touch(pos)
+        
+    def swipe_along(self, coordinates_list):
+        """
+        Perform swipe event across multiple points in sequence.
 
+        Args:
+            coordinates_list: list of coordinates.
+            
+        Returns:
+            None
+
+        """
+        self.minitouch.swipe_along(coordinates_list)
+        
     def swipe(self, p1, p2, duration=0.5, steps=5, fingers=1):
         """
         Perform swipe event on the device
