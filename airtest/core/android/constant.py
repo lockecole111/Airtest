@@ -17,6 +17,7 @@ DEFAULT_ADB_SERVER = ('127.0.0.1', 5037)
 SDK_VERISON_NEW = 24
 DEBUG = True
 STFLIB = os.path.join(STATICPATH, "stf_libs")
+UNLOCK_PATTERN = os.path.join(STATICPATH, "images","pattern.png")
 ROTATIONWATCHER_APK = os.path.join(STATICPATH, "apks", "RotationWatcher.apk")
 ROTATIONWATCHER_PACKAGE = "jp.co.cyberagent.stf.rotationwatcher"
 YOSEMITE_APK = os.path.join(STATICPATH, "apks", "Yosemite.apk")

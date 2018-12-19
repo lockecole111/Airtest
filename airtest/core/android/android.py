@@ -348,6 +348,7 @@ class Android(Device):
 
         """
         self.minitouch.swipe_along(coordinates_list)
+
         
     def swipe(self, p1, p2, duration=0.5, steps=5, fingers=1):
         """

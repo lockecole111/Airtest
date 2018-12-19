@@ -12,7 +12,7 @@ from airtest.core.error import TargetNotFoundError
 from airtest.core.helper import (G, delay_after_operation, import_device_cls,
                                  logwrap, set_logdir, using, log)
 from airtest.core.settings import Settings as ST
-
+from airtest.core.android.constant import UNLOCK_PATTERN
 
 """
 Device Setup APIs
@@ -321,7 +321,7 @@ def swipe(v1, v2=None, vector=None, **kwargs):
     return pos1, pos2
 
 @logwrap
-def unlock_pattern(v, sequence ):
+def unlock_pattern(sequence,v=Template(UNLOCK_PATTERN, record_pos=(-0.297, -0.354), resolution=(720, 1280)) ):
     """
     Unlock screen by handset unlock pattern.
 
